@@ -1,0 +1,21 @@
+ <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.clientsevermsgexample.ChatController"
+      spacing="10" padding="10">
+
+    <Label fx:id="statusLabel" style="-fx-font-weight: bold;"/>
+
+    <ScrollPane VBox.vgrow="ALWAYS" fitToWidth="true">
+        <VBox fx:id="messageArea" spacing="5"/>
+    </ScrollPane>
+
+    <HBox spacing="10">
+        <TextField fx:id="messageInput" HBox.hgrow="ALWAYS"
+                   onAction="#sendMessage" promptText="Type your message..."/>
+        <Button text="Send" onAction="#sendMessage"/>
+    </HBox>
+
+</VBox>
